@@ -23,7 +23,7 @@ if [ "" = "$PKG_OK" ]; then
 fi
 
 # delay 2 seconds
-sleep 2
+sleep 5
 clear
 
 # ok if apache2-utils already installed
@@ -145,7 +145,7 @@ echo -ne '=====================>  (96%)\r'
 sleep 0.4
 echo -ne '=======================>(100%)\r'
 echo -ne '\n\n'
-sleep 2
+sleep 5
 
 # execute command ab for apache2 benchmark 
 ab -n $reqval -c $conval$logfile$procval$siteval/
