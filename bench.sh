@@ -34,7 +34,7 @@ sleep 1
 echo -ne '\n'
 
 printf "\nWelcome to Apache Bechmark Website!"
-printf "\n\n${RED}!!! PLESE READ CAREFULLY !!!${NC}"
+printf "\n\n\e[1;41m!!! PLESE READ CAREFULLY !!!\e[0m"
 printf "\n${RED}Please use this program for testing purposes only!"
 printf "\nAny illegal activities (e.g. DDoS) will be processed by law. So, becareful!\n${NC}"
 
