@@ -9,6 +9,7 @@ WHITEONRED='\e[1;41m'
 BGNC='\e[0m'
 
 # checking apache2-utils packages
+printf "Checking prerequisites first. Please wait.\n"
 REQUIRED_PKG="apache2-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 echo Checking for $REQUIRED_PKG: $PKG_OK
