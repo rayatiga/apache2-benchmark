@@ -107,20 +107,25 @@ printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$si
 
 # loading to execute
 printf "Executing...\n"
+echo -ne '=>                      (4%)\r'
+sleep 0.2
 echo -ne '==>                     (11%)\r'
+sleep 0.4
+echo -ne '===>                    (17%)\r'
 sleep 0.2
-echo -ne '===>                    (22%)\r'
-sleep 0.2
+echo -ne '====>                   (28%)\r'
+sleep 0.3
 echo -ne '=====>                  (33%)\r'
+sleep 0.2
+echo -ne '=======>                (49%)\r'
 sleep 1
 echo -ne '=============>          (68%)\r'
 sleep 0.5
 echo -ne '===================>    (84%)\r'
-sleep 0.2
+sleep 0.7
 echo -ne '=====================>  (96%)\r'
 sleep 0.4
 echo -ne '=======================>(100%)\r'
-sleep 1
 echo -ne '\n\n'
 sleep 2
 
