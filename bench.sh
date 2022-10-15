@@ -14,7 +14,7 @@ fi
 sleep 2
 clear
 
-printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools\n"
+printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
 
 printf "\nLoading tools...\n"
 echo -ne '==>                     (11%)\r'
