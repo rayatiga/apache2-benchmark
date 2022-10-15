@@ -3,18 +3,22 @@
 # static color
 RED='\033[0;31m'
 REDBOLD='\033[1;31m'
+GREEN='\e[0;32m'
 YELLOW='\e[0;33m'
 NC='\033[0m'
+
+# static background color
 WHITEONRED='\e[1;41m'
 BGNC='\e[0m'
 
 # checking apache2-utils packages
-printf "Checking prerequisites first. Please wait.\n"
+printf "Checking prerequisites first. Please wait...\n"
+sleep 0.7
 REQUIRED_PKG="apache2-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
-echo Checking for $REQUIRED_PKG: $PKG_OK
+printf "Checking for $REQUIRED_PKG: ${GREEN}$PKG_OK${NC}\n"
 if [ "" = "$PKG_OK" ]; then
-  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  printf "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
@@ -30,27 +34,27 @@ printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
 
 # loading the tools
 printf "\nLoading tools...\n"
-echo -ne '=>                      (4%)\r'
+printf -ne '=>                      (4%)\r'
 sleep 0.2
-echo -ne '==>                     (11%)\r'
+printf -ne '==>                     (11%)\r'
 sleep 0.4
-echo -ne '===>                    (17%)\r'
+printf -ne '===>                    (17%)\r'
 sleep 0.2
-echo -ne '====>                   (28%)\r'
+printf -ne '====>                   (28%)\r'
 sleep 0.3
-echo -ne '=====>                  (33%)\r'
+printf -ne '=====>                  (33%)\r'
 sleep 0.2
-echo -ne '=======>                (49%)\r'
+printf -ne '=======>                (49%)\r'
 sleep 0.7
-echo -ne '=============>          (68%)\r'
+printf -ne '=============>          (68%)\r'
 sleep 0.5
-echo -ne '===================>    (84%)\r'
+printf -ne '===================>    (84%)\r'
 sleep 0.7
-echo -ne '=====================>  (96%)\r'
+printf -ne '=====================>  (96%)\r'
 sleep 0.4
-echo -ne '=======================>(100%)\r'
+printf -ne '=======================>(100%)\r'
 sleep 1
-echo -ne '\n'
+printf -ne '\n'
 
 # welcome
 printf "\nWelcome to Apache Bechmark Website!"
@@ -121,26 +125,26 @@ printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\
 
 # loading to execute
 printf "Executing...\n"
-echo -ne '=>                      (4%)\r'
+printf -ne '=>                      (4%)\r'
 sleep 0.2
-echo -ne '==>                     (11%)\r'
+printf -ne '==>                     (11%)\r'
 sleep 0.4
-echo -ne '===>                    (17%)\r'
+printf -ne '===>                    (17%)\r'
 sleep 0.2
-echo -ne '====>                   (28%)\r'
+printf -ne '====>                   (28%)\r'
 sleep 0.3
-echo -ne '=====>                  (33%)\r'
+printf -ne '=====>                  (33%)\r'
 sleep 0.2
-echo -ne '=======>                (49%)\r'
+printf -ne '=======>                (49%)\r'
 sleep 0.7
-echo -ne '=============>          (68%)\r'
+printf -ne '=============>          (68%)\r'
 sleep 0.5
-echo -ne '===================>    (84%)\r'
+printf -ne '===================>    (84%)\r'
 sleep 0.7
-echo -ne '=====================>  (96%)\r'
+printf -ne '=====================>  (96%)\r'
 sleep 0.4
-echo -ne '=======================>(100%)\r'
-echo -ne '\n\n'
+printf -ne '=======================>(100%)\r'
+printf -ne '\n\n'
 sleep 2
 
 # execute command ab for apache2 benchmark 
