@@ -38,10 +38,10 @@ printf "\n\n${RED}!!! PLESE READ CAREFULLY !!!${NC}"
 printf "\n${RED}Please use this program for testing purposes only!"
 printf "\nAny illegal activities (e.g. DDoS) will be processed by law. So, becareful!\n${NC}"
 
-read -p "Are you agree with that!? (y/n): " yn
+read -p "Do you agree? (y/n): " yn
 case $yn in 
-  y|Y ) printf "Great, I appreciate that!";;
-  n|N ) printf "OK then don't use this tool please :)\n\n"; exit 1;;
+  y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) printf "Great, I appreciate that!";;
+  n|N|no|No|nO|NO ) printf "OK then don't use this tool please :)\n\n"; exit 1;;
   * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
