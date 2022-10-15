@@ -24,7 +24,6 @@ fi
 
 # delay 5 seconds
 sleep 5
-clear
 
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
