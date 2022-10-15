@@ -22,39 +22,39 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-# delay 5 seconds
-sleep 5
+# delay 3 seconds
+sleep 3
 
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
-sleep 5
+sleep 3
 
 # loading the tools
 printf "\nLoading tools...\n"
 echo -ne '=>                      (4%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '==>                     (11%)\r'
-sleep 0.4
+sleep 0.1
 echo -ne '===>                    (17%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '====>                   (28%)\r'
-sleep 0.3
+sleep 0.1
 echo -ne '=====>                  (33%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '=======>                (49%)\r'
-sleep 0.7
+sleep 0.1
 echo -ne '=============>          (68%)\r'
-sleep 0.5
+sleep 0.1
 echo -ne '===================>    (84%)\r'
-sleep 0.7
+sleep 0.2
 echo -ne '=====================>  (96%)\r'
-sleep 0.4
+sleep 0.2
 echo -ne '=======================>(100%)\r'
-sleep 1
-echo -ne 'DONE.                         \r'
+sleep 0.5
+echo -ne 'completed.                    \r'
 echo -ne '\n'
 
 # welcome
@@ -127,26 +127,28 @@ printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\
 # loading to execute
 printf "Executing...\n"
 echo -ne '=>                      (4%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '==>                     (11%)\r'
-sleep 0.4
+sleep 0.1
 echo -ne '===>                    (17%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '====>                   (28%)\r'
-sleep 0.3
+sleep 0.1
 echo -ne '=====>                  (33%)\r'
-sleep 0.2
+sleep 0.1
 echo -ne '=======>                (49%)\r'
-sleep 0.7
+sleep 0.1
 echo -ne '=============>          (68%)\r'
-sleep 0.5
+sleep 0.1
 echo -ne '===================>    (84%)\r'
-sleep 0.7
+sleep 0.2
 echo -ne '=====================>  (96%)\r'
-sleep 0.4
+sleep 0.2
 echo -ne '=======================>(100%)\r'
+sleep 0.5
+echo -ne 'completed.                    \r'
 echo -ne '\n\n'
-sleep 5
+sleep 3
 
 # execute command ab for apache2 benchmark 
 ab -n $reqval -c $conval$logfile$procval$siteval/
