@@ -22,15 +22,15 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-# delay 3 seconds
-sleep 3
+# delay 2 seconds
+sleep 2
 
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
-sleep 3
+sleep 2
 
 # loading the tools
 printf "\nLoading tools...\n"
@@ -53,8 +53,9 @@ sleep 0.2
 echo -ne '=====================>  (96%)\r'
 sleep 0.2
 echo -ne '=======================>(100%)\r'
-sleep 0.5
+sleep 0.2
 echo -ne 'completed.                    \r'
+sleep 0.5
 echo -ne '\n'
 
 # welcome
@@ -145,10 +146,10 @@ sleep 0.2
 echo -ne '=====================>  (96%)\r'
 sleep 0.2
 echo -ne '=======================>(100%)\r'
-sleep 0.5
+sleep 0.2
 echo -ne 'completed.                    \r'
+sleep 0.5
 echo -ne '\n\n'
-sleep 3
 
 # execute command ab for apache2 benchmark 
 ab -n $reqval -c $conval$logfile$procval$siteval/
