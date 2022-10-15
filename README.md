@@ -30,11 +30,7 @@ Make file `bench.sh` executable by
 chmod +x bench.sh
 ```
 
-Running the file by
+Running the file
 ```bash
 ./bech.sh
-
-OR
-
-sh bench.sh
 ```
