@@ -14,7 +14,7 @@ fi
 sleep 2
 clear
 
-printf "\nOK, $REQUIRED_PKG has been installed, now running the tools\n"
+printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools\n"
 
 printf "\nLoading tools...\n"
 echo -ne '==>                     (11%)\r'
@@ -41,7 +41,7 @@ printf "\nAny illegal activities (e.g. DDoS) will be processed by law. So, becar
 read -p "Are you agree with that!? (y/n): " yn
 case $yn in 
   y|Y ) printf "Great, I appreciate that!";;
-  n|N ) printf "OK then don't use this tool please :)\n"; exit 1;;
+  n|N ) printf "OK then don't use this tool please :)\n\n"; exit 1;;
   * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
