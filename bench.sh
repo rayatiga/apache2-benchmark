@@ -18,17 +18,17 @@ printf "\nOK, $REQUIRED_PKG already installed in your system, now running the to
 
 printf "\nLoading tools...\n"
 echo -ne '==>                     (11%)\r'
-sleep 1
+sleep 0.2
 echo -ne '===>                    (22%)\r'
-sleep 1
+sleep 0.2
 echo -ne '=====>                  (33%)\r'
-sleep 2
+sleep 1
 echo -ne '=============>          (68%)\r'
-sleep 1
+sleep 0.5
 echo -ne '===================>    (84%)\r'
-sleep 1
+sleep 0.2
 echo -ne '=====================>  (96%)\r'
-sleep 1
+sleep 0.4
 echo -ne '=======================>(100%)\r'
 sleep 1
 echo -ne '\n'
@@ -60,8 +60,8 @@ fi
 
 read -p "Is your website using https/ssl enabled? (y/n): " yn
 case $yn in 
-  y|Y ) procval="https://";;
-  n|N ) procval="http://";;
+  y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) procval="https://";;
+  n|N|no|No|nO|NO ) procval="http://";;
   * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
@@ -69,8 +69,8 @@ read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
 
 read -p "Output log file? (y/n): " yn
 case $yn in 
-  y|Y ) logfile=" -e log-apache-benchmark.txt ";;
-  n|N ) logfile=" ";;
+  y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) logfile=" -e log-apache-benchmark.txt ";;
+  n|N|no|No|nO|NO ) logfile=" ";;
   * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
