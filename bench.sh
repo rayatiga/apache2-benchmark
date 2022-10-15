@@ -25,7 +25,7 @@ printf "\nOK, $REQUIRED_PKG already installed in your system, now running the to
 
 # loading the tools
 printf "\nLoading tools...\n"
-eecho -ne '=>                      (4%)\r'
+echo -ne '=>                      (4%)\r'
 sleep 0.2
 echo -ne '==>                     (11%)\r'
 sleep 0.4
