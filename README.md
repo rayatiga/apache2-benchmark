@@ -34,3 +34,5 @@ Running the file
 ```bash
 ./bech.sh
 ```
+
+That's all, thank you!
