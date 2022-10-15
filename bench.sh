@@ -66,7 +66,7 @@ read -pn "Please input your request number: " reqval
 if ! [[ "$reqval" =~ ^[0-9]+$ ]] ; 
     then exec >&2; printf "${RED}error: Not a number!\n${NC}"; exit 1
 fi
-if [ reqval -gt 9999999 ]
+if [ $reqval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much requests!\n${NC}"; exit 1
 fi
 
@@ -75,7 +75,7 @@ read -pn "Please input your concurrent number: " conval
 if ! [[ "$conval" =~ ^[0-9]+$ ]] ; 
     then exec >&2; printf "${RED}error: Not a number!\n${NC}"; exit 1
 fi
-if [ reqval -gt 9999999 ]
+if [ $conval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much concurrents!\n${NC}"; exit 1
 fi
 
