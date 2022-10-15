@@ -2,6 +2,7 @@
 
 # static color
 RED='\033[0;31m'
+REDBOLD='\033[1;31m'
 YELLOW='\e[0;33m'
 NC='\033[0m'
 WHITEONRED='\e[1;41m'
@@ -110,6 +111,9 @@ sleep 2
 
 # summary of command to execute
 printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
+
+# cancelling
+printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n"
 
 # loading to execute
 printf "Executing...\n"
