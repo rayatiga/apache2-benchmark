@@ -25,16 +25,22 @@ printf "\nOK, $REQUIRED_PKG already installed in your system, now running the to
 
 # loading the tools
 printf "\nLoading tools...\n"
+eecho -ne '=>                      (4%)\r'
+sleep 0.2
 echo -ne '==>                     (11%)\r'
+sleep 0.4
+echo -ne '===>                    (17%)\r'
 sleep 0.2
-echo -ne '===>                    (22%)\r'
-sleep 0.2
+echo -ne '====>                   (28%)\r'
+sleep 0.3
 echo -ne '=====>                  (33%)\r'
-sleep 1
+sleep 0.2
+echo -ne '=======>                (49%)\r'
+sleep 0.7
 echo -ne '=============>          (68%)\r'
 sleep 0.5
 echo -ne '===================>    (84%)\r'
-sleep 0.2
+sleep 0.7
 echo -ne '=====================>  (96%)\r'
 sleep 0.4
 echo -ne '=======================>(100%)\r'
@@ -118,7 +124,7 @@ sleep 0.3
 echo -ne '=====>                  (33%)\r'
 sleep 0.2
 echo -ne '=======>                (49%)\r'
-sleep 1
+sleep 0.7
 echo -ne '=============>          (68%)\r'
 sleep 0.5
 echo -ne '===================>    (84%)\r'
