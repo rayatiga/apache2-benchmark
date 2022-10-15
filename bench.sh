@@ -24,6 +24,9 @@ clear
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
 
+# cancelling
+printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
+
 # loading the tools
 printf "\nLoading tools...\n"
 echo -ne '=>                      (4%)\r'
