@@ -3,6 +3,19 @@
 RED='\033[0;31m'
 NC='\033[0m'
 
+REQUIRED_PKG="apache2-utils"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Checking for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  sudo apt-get --yes install $REQUIRED_PKG 
+fi
+
+sleep 2
+clear
+
+printf "\nOK, $REQUIRED_PKG has been installed, now running the tools\n"
+
 printf "\nLoading tools...\n"
 echo -ne '==>                     (11%)\r'
 sleep 1
