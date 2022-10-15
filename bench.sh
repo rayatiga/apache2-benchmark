@@ -54,6 +54,7 @@ echo -ne '=====================>  (96%)\r'
 sleep 0.4
 echo -ne '=======================>(100%)\r'
 sleep 1
+echo -ne 'DONE.                         \r'
 echo -ne '\n'
 
 # welcome
