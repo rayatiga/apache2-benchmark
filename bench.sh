@@ -146,9 +146,8 @@ sleep 0.2
 echo -ne '=====================>  (96%)\r'
 sleep 0.2
 echo -ne '=======================>(100%)\r'
-sleep 0.2
-echo -ne '                              \r'
 sleep 0.5
+echo -ne '                              \r'
 echo -ne '\n'
 
 # execute command ab for apache2 benchmark 
