@@ -12,7 +12,7 @@ WHITEONRED='\e[1;41m'
 BGNC='\e[0m'
 
 # checking apache2-utils packages
-printf "Checking prerequisites first. Please wait...\n"
+printf "\nChecking prerequisites first. Please wait...\n"
 sleep 0.7
 REQUIRED_PKG="apache2-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
@@ -34,27 +34,27 @@ printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
 
 # loading the tools
 printf "\nLoading tools...\n"
-printf -ne '=>                      (4%)\r'
+echo -ne '=>                      (4%)\r'
 sleep 0.2
-printf -ne '==>                     (11%)\r'
+echo -ne '==>                     (11%)\r'
 sleep 0.4
-printf -ne '===>                    (17%)\r'
+echo -ne '===>                    (17%)\r'
 sleep 0.2
-printf -ne '====>                   (28%)\r'
+echo -ne '====>                   (28%)\r'
 sleep 0.3
-printf -ne '=====>                  (33%)\r'
+echo -ne '=====>                  (33%)\r'
 sleep 0.2
-printf -ne '=======>                (49%)\r'
+echo -ne '=======>                (49%)\r'
 sleep 0.7
-printf -ne '=============>          (68%)\r'
+echo -ne '=============>          (68%)\r'
 sleep 0.5
-printf -ne '===================>    (84%)\r'
+echo -ne '===================>    (84%)\r'
 sleep 0.7
-printf -ne '=====================>  (96%)\r'
+echo -ne '=====================>  (96%)\r'
 sleep 0.4
-printf -ne '=======================>(100%)\r'
+echo -ne '=======================>(100%)\r'
 sleep 1
-printf -ne '\n'
+echo -ne '\n'
 
 # welcome
 printf "\nWelcome to Apache Bechmark Website!"
@@ -125,26 +125,26 @@ printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\
 
 # loading to execute
 printf "Executing...\n"
-printf -ne '=>                      (4%)\r'
+echo -ne '=>                      (4%)\r'
 sleep 0.2
-printf -ne '==>                     (11%)\r'
+echo -ne '==>                     (11%)\r'
 sleep 0.4
-printf -ne '===>                    (17%)\r'
+echo -ne '===>                    (17%)\r'
 sleep 0.2
-printf -ne '====>                   (28%)\r'
+echo -ne '====>                   (28%)\r'
 sleep 0.3
-printf -ne '=====>                  (33%)\r'
+echo -ne '=====>                  (33%)\r'
 sleep 0.2
-printf -ne '=======>                (49%)\r'
+echo -ne '=======>                (49%)\r'
 sleep 0.7
-printf -ne '=============>          (68%)\r'
+echo -ne '=============>          (68%)\r'
 sleep 0.5
-printf -ne '===================>    (84%)\r'
+echo -ne '===================>    (84%)\r'
 sleep 0.7
-printf -ne '=====================>  (96%)\r'
+echo -ne '=====================>  (96%)\r'
 sleep 0.4
-printf -ne '=======================>(100%)\r'
-printf -ne '\n\n'
+echo -ne '=======================>(100%)\r'
+echo -ne '\n\n'
 sleep 2
 
 # execute command ab for apache2 benchmark 
