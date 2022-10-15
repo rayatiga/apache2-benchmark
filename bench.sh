@@ -147,9 +147,9 @@ echo -ne '=====================>  (96%)\r'
 sleep 0.2
 echo -ne '=======================>(100%)\r'
 sleep 0.2
-echo -ne 'completed.                    \r'
+echo -ne '                              \r'
 sleep 0.5
-echo -ne '\n\n'
+echo -ne '\n'
 
 # execute command ab for apache2 benchmark 
 ab -n $reqval -c $conval$logfile$procval$siteval/
