@@ -62,7 +62,7 @@ printf "\n\nOK. Enough intro, let's input your request for bechmarking your site
 printf "\nBtw, this program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}"
 
 # number request
-read -p "Please input your request number: " reqval
+read -pn "Please input your request number: " reqval
 if ! [[ "$reqval" =~ ^[0-9]+$ ]] ; 
     then exec >&2; printf "${RED}error: Not a number!\n${NC}"; exit 1
 fi
@@ -71,7 +71,7 @@ if [ reqval -gt 9999999 ]
 fi
 
 # numnber of concurrent
-read -p "Please input your concurrent number: " conval
+read -pn "Please input your concurrent number: " conval
 if ! [[ "$conval" =~ ^[0-9]+$ ]] ; 
     then exec >&2; printf "${RED}error: Not a number!\n${NC}"; exit 1
 fi
