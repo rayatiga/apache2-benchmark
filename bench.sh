@@ -22,7 +22,7 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-# delay 2 seconds
+# delay 5 seconds
 sleep 5
 clear
 
@@ -31,6 +31,7 @@ printf "\nOK, $REQUIRED_PKG already installed in your system, now running the to
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
+sleep 5
 
 # loading the tools
 printf "\nLoading tools...\n"
