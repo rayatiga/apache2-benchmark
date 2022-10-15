@@ -7,7 +7,7 @@ Complete command:
 
 Clone, move to directory, create executable, and run the file (just copy all, paste, and execute)
 ```bash
-git clone https://github.com/rayatiga/apache2-bechmark.git .
+git clone https://github.com/rayatiga/apache2-bechmark.git
 cd apache2-bechmark
 chmod +x bench.sh
 ./bech.sh
@@ -17,7 +17,7 @@ OR Manual:
 
 Clone this repo
 ```bash
-git clone https://github.com/rayatiga/apache2-bechmark.git .
+git clone https://github.com/rayatiga/apache2-bechmark.git
 ```
 
 Move to `apache2-bechmark` directory by
