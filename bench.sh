@@ -2,9 +2,9 @@
 
 # static color
 RED='\033[0;31m'
+YELLOW='\e[0;33m'
 NC='\033[0m'
 WHITEONRED='\e[1;41m'
-WHITEONYELLOW='\e[1;43m'
 BGNC='\e[0m'
 
 # checking apache2-utils packages
@@ -103,10 +103,10 @@ printf "\nExecuting apache benchmark $reqval request(s) with $conval concurrent(
 sleep 2
 
 # summary of command to execute
-printf "Command to execute: ${WHITEONYELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${BGNC}\n\n"
+printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
 
 # loading to execute
-printf "\nExecuting...\n"
+printf "Executing...\n"
 echo -ne '==>                     (11%)\r'
 sleep 0.2
 echo -ne '===>                    (22%)\r'
@@ -121,7 +121,7 @@ echo -ne '=====================>  (96%)\r'
 sleep 0.4
 echo -ne '=======================>(100%)\r'
 sleep 1
-echo -ne '\n'
+echo -ne '\n\n'
 sleep 2
 
 # execute command ab for apache2 benchmark 
