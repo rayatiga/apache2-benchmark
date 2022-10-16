@@ -22,8 +22,8 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
-# delay 2 seconds
-sleep 2
+# delay 1 seconds
+sleep 1
 
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
@@ -117,7 +117,7 @@ esac
 
 # information
 printf "\nExecuting apache benchmark $reqval request(s) with $conval concurrent(s)to $siteval now.\n"
-sleep 2
+sleep 1
 
 # summary of command to execute
 printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
