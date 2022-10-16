@@ -3,7 +3,7 @@ Tool for bechmarking your apache2 based sites. Clone and enjoy bechmarking!
 
 ## Installation
 
-Complete command:
+**Complete command:**
 
 Clone, move to directory, create executable, and run the file (just copy all, paste, and execute)
 ```bash
@@ -13,7 +13,7 @@ chmod +x bench.sh
 ./bech.sh
 ```
 
-OR Manual:
+**OR Manual:**
 
 Clone this repo
 ```bash
