@@ -86,10 +86,12 @@ case $yn in
     n|N|no|No|nO|NO ) printf "OK then don't use this tool please :)\n\n"; exit 1;;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
+sleep 1
 
 # ready to use
 printf "\n\nOK. Enough intro, let's input your request for bechmarking your site now."
-printf "\nBtw, this program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}"
+printf "\nThis program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}"
+sleep 1
 
 # number request
 read -p "Please input your request number: " reqval
@@ -99,7 +101,9 @@ fi
 if [ $reqval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much requests!\n${NC}"; exit 1
 fi
+sleep 1
 printf "Input: ${GREEN}$reqval request(s)${NC} saved.\n"
+sleep 1
 
 # numnber of concurrent
 read -p "Please input your concurrent number: " conval
@@ -109,7 +113,9 @@ fi
 if [ $conval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much concurrents!\n${NC}"; exit 1
 fi
+sleep 1
 printf "Input: ${GREEN}$conval concurrent(s)${NC} saved.\n"
+sleep 1
 
 # is use http or https?
 read -p "Is your website using https/ssl enabled? (y/n): " yn
@@ -118,28 +124,40 @@ case $yn in
     n|N|no|No|nO|NO ) procval="http://";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
+sleep 1
 printf "Protocol: ${GREEN}$procval${NC} saved.\n"
+sleep 1
 
 # domain or ip address destination
 read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
+sleep 1
 printf "Destination: ${GREEN}$procval$siteval/${NC} saved.\n"
+sleep 1
 
 # use log file (log-benchmark.txt)?
 read -p "Output log file? (y/n): " yn
 case $yn in 
-    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) logval="Yes"; printf "Using log: ${GREEN}Yes.${NC}\n"; logfile=" -e log-benchmark.txt ";;
-    n|N|no|No|nO|NO ) logval="No"; printf "Using log: ${RED}No.${NC}\n"; logfile=" ";;
+    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) sleep 1; logval="Yes"; printf "Using log: ${GREEN}Yes.${NC}\n"; logfile=" -e log-benchmark.txt ";;
+    n|N|no|No|nO|NO ) sleep 1; logval="No"; printf "Using log: ${RED}No.${NC}\n"; logfile=" ";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
+sleep 1
 
 # information
 printf "\nExecuting apache benchmark as shown:\n"
+sleep 0.2
 printf "Number of request(s)    : $reqval\n"
+sleep 0.2
 printf "Number of concurrent(s) : $conval\n"
+sleep 0.2
 printf "Protocol                : $procval\n"
+sleep 0.2
 printf "Destination             : $siteval\n"
+sleep 0.2
 printf "Save log                : $logval\n"
-printf "Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n"
+sleep 0.2
+printf "Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n\n"
+sleep 0.2
 read -p "If the information is correct, confirm to perform benchmank execution. (y/n): " yn
 case $yn in 
     y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
@@ -152,6 +170,7 @@ sleep 1
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n"
+sleep 0.2
 
 # loading to execute
 printf "Executing...\n"
@@ -179,4 +198,5 @@ echo -ne '                              \r'
 echo -ne '\n'
 
 # execute command ab for apache2 benchmark 
+sleep 1
 ab -n $reqval -c $conval$logfile$procval$siteval/
