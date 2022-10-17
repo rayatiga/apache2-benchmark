@@ -145,19 +145,19 @@ sleep 0.5
 
 # information
 printf "\nExecuting apache benchmark as shown:\n"
-sleep 0.2
+sleep 0.1
 printf "Number of request(s)    : $reqval\n"
-sleep 0.2
+sleep 0.1
 printf "Number of concurrent(s) : $conval\n"
-sleep 0.2
+sleep 0.1
 printf "Protocol                : $procval\n"
-sleep 0.2
+sleep 0.1
 printf "Destination             : $siteval\n"
-sleep 0.2
+sleep 0.1
 printf "Save log                : $logval\n"
-sleep 0.2
+sleep 0.1
 printf "Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n\n"
-sleep 0.2
+sleep 0.1
 read -p "If the information is correct, confirm to perform benchmank execution. (y/n): " yn
 case $yn in 
     y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
@@ -170,7 +170,7 @@ sleep 1
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n"
-sleep 0.2
+sleep 2
 
 # loading to execute
 printf "Executing...\n"
