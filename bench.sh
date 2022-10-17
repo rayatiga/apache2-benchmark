@@ -22,6 +22,14 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
+# double check the packages
+REQUIRED_PKG="apache2-utils"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+if [ "" = "$PKG_OK" ]; then
+  printf "${REDBOLD}Can't find/install $REQUIRED_PKG package(s). Please install manually.${NC}"
+  exit 1;
+fi
+
 # delay 1 seconds
 sleep 1
 
