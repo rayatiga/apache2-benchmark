@@ -94,7 +94,7 @@ fi
 if [ $reqval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much requests!\n${NC}"; exit 1
 fi
-printf "input: ${GREEN}$reqval request(s)${NC} saved."
+printf "Input: ${GREEN}$reqval request(s)${NC} saved.\n"
 
 # numnber of concurrent
 read -p "Please input your concurrent number: " conval
@@ -104,7 +104,7 @@ fi
 if [ $conval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much concurrents!\n${NC}"; exit 1
 fi
-printf "Input: ${GREEN}$conval concurrent(s)${NC} saved."
+printf "Input: ${GREEN}$conval concurrent(s)${NC} saved.\n"
 
 # is use http or https?
 read -p "Is your website using https/ssl enabled? (y/n): " yn
@@ -113,7 +113,7 @@ case $yn in
     n|N|no|No|nO|NO ) procval="http://";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
-printf "Using ${GREEN}$procval${NC} saved."
+printf "Protocol: ${GREEN}$procval${NC} saved.\n"
 
 # domain or ip address destination
 read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
