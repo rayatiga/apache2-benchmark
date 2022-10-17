@@ -117,7 +117,7 @@ printf "Protocol: ${GREEN}$procval${NC} saved.\n"
 
 # domain or ip address destination
 read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
-printf "Destination: ${GREEN}$siteval${NC} saved.\n"
+printf "Destination: ${GREEN}$procval$siteval/${NC} saved.\n"
 
 # use log file (log-benchmark.txt)?
 read -p "Output log file? (y/n): " yn
@@ -133,8 +133,7 @@ printf "Number of request(s)    : $reqval\n"
 printf "Number of concurrent(s) : $conval\n"
 printf "Protocol                : $procval\n"
 printf "Save log                : $logval\n"
-printf "If the information is correct, confirm to perform benchmank execution. (y/n): "
-read -p "Output log file? (y/n): " yn
+read -p "If the information is correct, confirm to perform benchmank execution. (y/n): " yn
 case $yn in 
     y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
     n|N|no|No|nO|NO ) exit 1;;
@@ -143,6 +142,7 @@ esac
 
 # summary of command to execute
 printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
+sleep 1
 
 # cancelling
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n"
