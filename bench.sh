@@ -94,6 +94,7 @@ fi
 if [ $reqval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much requests!\n${NC}"; exit 1
 fi
+printf "input: ${GREEN}$reqval request(s)${NC} saved."
 
 # numnber of concurrent
 read -p "Please input your concurrent number: " conval
@@ -103,6 +104,7 @@ fi
 if [ $conval -gt 9999999 ]
     then exec >&2; printf "${RED}error: Too much concurrents!\n${NC}"; exit 1
 fi
+printf "Input: ${GREEN}$conval concurrent(s)${NC} saved."
 
 # is use http or https?
 read -p "Is your website using https/ssl enabled? (y/n): " yn
@@ -111,15 +113,17 @@ case $yn in
     n|N|no|No|nO|NO ) procval="http://";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
+printf "Using ${GREEN}$procval${NC} saved."
 
 # domain or ip address destination
 read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
+printf "Destination: ${GREEN}$siteval${NC} saved."
 
 # use log file (log-benchmark.txt)?
 read -p "Output log file? (y/n): " yn
 case $yn in 
-    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) logfile=" -e log-benchmark.txt ";;
-    n|N|no|No|nO|NO ) logfile=" ";;
+    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) printf "Using log: ${GREEN}Yes.${NC}"; logfile=" -e log-benchmark.txt ";;
+    n|N|no|No|nO|NO ) printf "Using log: ${RED}No.${NC}"; logfile=" ";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
