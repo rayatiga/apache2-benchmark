@@ -23,17 +23,21 @@ REQUIRED_PKG="apache2-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 printf "Checking for $REQUIRED_PKG: ${GREEN}$PKG_OK${NC}\n"
 if [ "" = "$PKG_OK" ]; then
-  printf "No $REQUIRED_PKG. Setting up $REQUIRED_PKG. This sometime required a password."
-  sleep 1
-  sudo apt-get --yes install $REQUIRED_PKG 
+    printf "No $REQUIRED_PKG. Setting up $REQUIRED_PKG. This sometime required a password."
+    sleep 1
+    sudo apt-get --yes install $REQUIRED_PKG 
+    # clear the screen
+    printf "\nClearing the terminal screen..."
+    sleep 1
+    clear
 fi
 
 # double check the packages
 REQUIRED_PKG="apache2-utils"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 if [ "" = "$PKG_OK" ]; then
-  printf "${REDBOLD}Can't find/install $REQUIRED_PKG package(s). Please install manually.${NC}"
-  exit 1;
+    printf "${REDBOLD}Can't find/install $REQUIRED_PKG package(s). Please install manually.${NC}"
+    exit 1;
 fi
 
 # delay 1 second
