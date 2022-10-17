@@ -11,6 +11,11 @@ NC='\033[0m'
 WHITEONRED='\e[1;41m'
 BGNC='\e[0m'
 
+# clear the screen
+printf "Clearing the terminal screen..."
+sleep 1
+clear
+
 # checking apache2-utils packages
 printf "\nChecking prerequisites first. Please wait...\n"
 sleep 0.7
@@ -30,7 +35,7 @@ if [ "" = "$PKG_OK" ]; then
   exit 1;
 fi
 
-# delay 1 seconds
+# delay 1 second
 sleep 1
 
 # ok if apache2-utils already installed
@@ -132,7 +137,9 @@ printf "\nExecuting apache benchmark as shown:\n"
 printf "Number of request(s)    : $reqval\n"
 printf "Number of concurrent(s) : $conval\n"
 printf "Protocol                : $procval\n"
+printf "Destination             : $siteval\n"
 printf "Save log                : $logval\n"
+printf "Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n"
 read -p "If the information is correct, confirm to perform benchmank execution. (y/n): " yn
 case $yn in 
     y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
@@ -140,8 +147,7 @@ case $yn in
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
-# summary of command to execute
-printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
+# delay 1 second
 sleep 1
 
 # cancelling
