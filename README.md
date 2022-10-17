@@ -1,7 +1,7 @@
 # apache2-bechmark
 Tool for bechmarking your apache2 based sites. Clone and enjoy bechmarking!
 
-## Installation
+## Quick Installation
 
 **Complete command:**
 
@@ -13,7 +13,9 @@ chmod +x bench.sh
 ./bech.sh
 ```
 
-**OR Manual:**
+## Manual Installation
+
+**Step-by-Step (+4) Manual Installation:**
 
 Clone this repo
 ```bash
