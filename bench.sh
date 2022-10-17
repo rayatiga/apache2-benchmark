@@ -122,14 +122,24 @@ printf "Destination: ${GREEN}$siteval${NC} saved.\n"
 # use log file (log-benchmark.txt)?
 read -p "Output log file? (y/n): " yn
 case $yn in 
-    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) printf "Using log: ${GREEN}Yes.${NC}"; logfile=" -e log-benchmark.txt ";;
-    n|N|no|No|nO|NO ) printf "Using log: ${RED}No.${NC}\n"; logfile=" ";;
+    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) logval="Yes"; printf "Using log: ${GREEN}Yes.${NC}\n"; logfile=" -e log-benchmark.txt ";;
+    n|N|no|No|nO|NO ) logval="No"; printf "Using log: ${RED}No.${NC}\n"; logfile=" ";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
 # information
-printf "\nExecuting apache benchmark $reqval request(s) with $conval concurrent(s)to $siteval now.\n"
-sleep 1
+printf "\nExecuting apache benchmark as shown:\n"
+printf "Number of request(s)    : $reqval\n"
+printf "Number of concurrent(s) : $conval\n"
+printf "Protocol                : $procval\n"
+printf "Save log                : $logval\n"
+printf "If the information is correct, confirm to perform benchmank execution. (y/n): "
+read -p "Output log file? (y/n): " yn
+case $yn in 
+    y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
+    n|N|no|No|nO|NO ) exit 1;;
+    * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
+esac
 
 # summary of command to execute
 printf "Command to execute: ${YELLOW}ab -n $reqval -c $conval$logfile$procval$siteval/${NC}\n\n"
