@@ -117,13 +117,13 @@ printf "Protocol: ${GREEN}$procval${NC} saved.\n"
 
 # domain or ip address destination
 read -p "Please input your ip/domain destination (e.g. yoursite.com): " siteval
-printf "Destination: ${GREEN}$siteval${NC} saved."
+printf "Destination: ${GREEN}$siteval${NC} saved.\n"
 
 # use log file (log-benchmark.txt)?
 read -p "Output log file? (y/n): " yn
 case $yn in 
     y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) printf "Using log: ${GREEN}Yes.${NC}"; logfile=" -e log-benchmark.txt ";;
-    n|N|no|No|nO|NO ) printf "Using log: ${RED}No.${NC}"; logfile=" ";;
+    n|N|no|No|nO|NO ) printf "Using log: ${RED}No.${NC}\n"; logfile=" ";;
     * ) printf "${RED}Invalid input!\n${NC}"; exit 1;;
 esac
 
