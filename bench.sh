@@ -202,6 +202,8 @@ sleep 0.5
 echo -ne '                              \r'
 echo -ne '\n'
 
-# execute command ab for apache2 benchmark 
+# delay 1 second
 sleep 1
+
+# execute command ab for apache2 benchmark 
 ab -n $reqval -c $conval$logfile$procval$siteval/
