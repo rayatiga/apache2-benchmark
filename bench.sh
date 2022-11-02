@@ -148,7 +148,7 @@ case $yn in
 esac
 sleep 0.5
 
-# information
+# full generated information
 printf "\nExecuting apache benchmark as shown:\n"
 sleep 0.1
 printf "Number of request(s)    : $reqval\n"
