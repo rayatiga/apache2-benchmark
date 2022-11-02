@@ -46,7 +46,7 @@ sleep 1
 # ok if apache2-utils already installed
 printf "\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n"
 
-# cancelling
+# cancelling information 1
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n"
 sleep 1
 
@@ -173,7 +173,7 @@ esac
 # delay 1 second
 sleep 1
 
-# cancelling
+# cancelling information 2
 printf "NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n"
 sleep 2
 
