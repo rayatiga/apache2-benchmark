@@ -1,4 +1,4 @@
-# apache2-bechmark
+# apache2-benchmark
 Tool for bechmarking your apache2 based sites. Clone and enjoy bechmarking!
 
 ## Quick Installation
