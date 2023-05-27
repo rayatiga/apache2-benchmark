@@ -72,7 +72,7 @@ echo -ne '=====================>  (96%)\r'
 sleep 0.5
 echo -ne '=======================>(100%)\r'
 sleep 0.5
-echo -ne 'completed.                    \r'
+echo -ne 'Load completed.               \r'
 sleep 0.8
 echo -ne '\n'
 
