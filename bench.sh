@@ -53,27 +53,27 @@ sleep 1
 # loading the tools
 printf "\nLoading tools...\n"
 echo -ne '=>                      (4%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '==>                     (11%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '===>                    (17%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '====>                   (28%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '=====>                  (33%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '=======>                (49%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '=============>          (68%)\r'
-sleep 0.1
+sleep 0.4
 echo -ne '===================>    (84%)\r'
-sleep 0.2
-echo -ne '=====================>  (96%)\r'
-sleep 0.2
-echo -ne '=======================>(100%)\r'
-sleep 0.2
-echo -ne 'completed.                    \r'
 sleep 0.5
+echo -ne '=====================>  (96%)\r'
+sleep 0.5
+echo -ne '=======================>(100%)\r'
+sleep 0.5
+echo -ne 'completed.                    \r'
+sleep 0.8
 echo -ne '\n'
 
 # welcome
